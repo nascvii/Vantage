@@ -1,0 +1,254 @@
+/* ================================================================
+   VANTAGE — Dark RPG Theme
+   bg: #0f0e17 | surface: #1a1826 | border: #2d2b3d
+   gold: #c9a84c | text: #fffffe | muted: #a7a9be
+   ================================================================ */
+
+/* ===== Base ===== */
+
+QWidget {
+    background-color: #0f0e17;
+    color: #fffffe;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    font-size: 13px;
+    border: none;
+    outline: none;
+}
+
+QMainWindow { background-color: #0f0e17; }
+
+/* ===== Scrollbar ===== */
+
+QScrollArea { background: transparent; }
+QScrollBar:vertical {
+    background: #1a1826; width: 6px; border: none;
+}
+QScrollBar::handle:vertical {
+    background: #2d2b3d; border-radius: 3px; min-height: 30px;
+}
+QScrollBar::handle:vertical:hover { background: #c9a84c; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }
+
+/* ===== Titlebar ===== */
+
+#Titlebar {
+    background-color: #1a1826;
+    border-bottom: 1px solid #2d2b3d;
+    min-height: 36px; max-height: 36px;
+}
+#TitlebarLabel { color: #a7a9be; font-size: 12px; }
+#WinBtn {
+    background: transparent; color: #a7a9be; border-radius: 4px;
+    min-width: 36px; max-width: 36px; min-height: 36px; max-height: 36px; font-size: 14px;
+}
+#WinBtn:hover { background-color: #2d2b3d; color: #fffffe; }
+#WinBtnClose:hover { background-color: #8b2635; color: #fffffe; }
+
+/* ===== Sidebar ===== */
+
+#Sidebar {
+    background-color: #1a1826;
+    border-right: 1px solid #2d2b3d;
+    min-width: 200px; max-width: 200px;
+}
+#SidebarTitle {
+    font-size: 18px; font-weight: 700; color: #c9a84c;
+    padding: 20px 16px 8px 16px; letter-spacing: 2px;
+}
+#SidebarSubtitle {
+    font-size: 10px; color: #a7a9be;
+    padding: 0 16px 20px 16px; letter-spacing: 1px;
+}
+#NavButton {
+    background-color: transparent; color: #a7a9be;
+    text-align: left; padding: 10px 16px; border-radius: 6px; font-size: 13px;
+}
+#NavButton:hover { background-color: #2d2b3d; color: #fffffe; }
+#NavButton[active="true"] {
+    background-color: #2d2b3d; color: #c9a84c; font-weight: 600;
+    border-left: 3px solid #c9a84c; padding-left: 13px;
+}
+
+/* ===== Separadores ===== */
+
+#VSeparator { background-color: #2d2b3d; }
+#ToolSep { background-color: #2d2b3d; }
+
+/* ===== Labels de seção ===== */
+
+#PageTitle {
+    font-size: 22px; font-weight: 700; color: #c9a84c; letter-spacing: 1px;
+}
+#SectionLabel {
+    font-size: 11px; color: #a7a9be; letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* ===== Botões primário / secundário / perigo ===== */
+
+#PrimaryButton {
+    background-color: #c9a84c; color: #0f0e17; border-radius: 6px;
+    font-weight: 600; padding: 8px 18px; font-size: 13px;
+}
+#PrimaryButton:hover { background-color: #e8c97b; }
+#PrimaryButton:pressed { background-color: #a88a36; }
+#PrimaryButton:disabled { background-color: #2d2b3d; color: #a7a9be; }
+
+#SecondaryButton {
+    background-color: #2d2b3d; color: #fffffe; border-radius: 6px;
+    font-weight: 500; padding: 8px 18px; font-size: 13px;
+}
+#SecondaryButton:hover { background-color: #3d3b4d; }
+
+#DangerButton {
+    background-color: transparent; color: #b33a4a; border: 1px solid #8b2635;
+    border-radius: 6px; padding: 8px 18px; font-size: 13px;
+}
+#DangerButton:hover { background-color: #8b2635; color: #fffffe; }
+
+/* ===== Inputs (QLineEdit, QSpinBox, QComboBox) ===== */
+
+QLineEdit, #FormInput, #SearchInput, #TokenNameInput {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 6px;
+    color: #fffffe; padding: 8px 12px; font-size: 13px;
+}
+QLineEdit:focus, #FormInput:focus, #SearchInput:focus {
+    border-color: #c9a84c;
+}
+
+QSpinBox {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 6px;
+    color: #fffffe; padding: 6px 10px; font-size: 13px; min-width: 70px;
+}
+QSpinBox:focus { border-color: #c9a84c; }
+QSpinBox::up-button, QSpinBox::down-button {
+    background-color: #2d2b3d; border: none; width: 18px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover { background-color: #c9a84c; }
+
+QComboBox {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 6px;
+    color: #fffffe; padding: 6px 12px; font-size: 13px; min-width: 80px;
+}
+QComboBox:hover { border-color: #c9a84c; }
+QComboBox::drop-down {
+    border: none; background: #2d2b3d; width: 24px; border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+QComboBox::down-arrow { image: none; }
+QComboBox QAbstractItemView {
+    background-color: #1a1826; border: 1px solid #2d2b3d;
+    color: #fffffe; selection-background-color: #2d2b3d;
+    selection-color: #c9a84c;
+}
+
+/* ===== TextEdit ===== */
+
+QTextEdit, #NotesEdit, #LoreEditor {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 6px;
+    color: #fffffe; padding: 10px; font-size: 13px; selection-background-color: #c9a84c;
+    selection-color: #0f0e17;
+}
+QTextEdit:focus, #NotesEdit:focus, #LoreEditor:focus { border-color: #c9a84c; }
+
+/* ===== CheckBox (perícias) ===== */
+
+QCheckBox {
+    color: #a7a9be; spacing: 6px; font-size: 12px;
+}
+QCheckBox:hover { color: #fffffe; }
+QCheckBox::indicator {
+    width: 16px; height: 16px; border-radius: 3px;
+    background-color: #1a1826; border: 1px solid #2d2b3d;
+}
+QCheckBox::indicator:hover { border-color: #c9a84c; }
+QCheckBox::indicator:checked {
+    background-color: #c9a84c; border-color: #c9a84c;
+}
+
+/* ===== Dados — Rolagem ===== */
+
+#DiceButton {
+    background-color: #1a1826; color: #fffffe; border: 1px solid #2d2b3d;
+    border-radius: 8px; font-size: 18px; font-weight: 600;
+    min-width: 80px; min-height: 80px;
+}
+#DiceButton:hover { background-color: #2d2b3d; border-color: #c9a84c; color: #c9a84c; }
+#DiceButton:pressed { background-color: #c9a84c; color: #0f0e17; }
+#DiceButton[selected="true"] {
+    background-color: #2d2b3d; border: 2px solid #c9a84c; color: #c9a84c; font-weight: 700;
+}
+
+#ResultDisplay {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 12px; padding: 20px;
+}
+#ResultTotal { font-size: 72px; font-weight: 700; color: #c9a84c; }
+#ResultLabel { font-size: 14px; color: #a7a9be; }
+#ResultBreakdown { font-size: 12px; color: #a7a9be; }
+
+#HistoryPanel {
+    background-color: #1a1826; border: 1px solid #2d2b3d; border-radius: 8px;
+}
+#HistoryItem {
+    background: transparent; border-bottom: 1px solid #2d2b3d; padding: 8px 12px;
+}
+
+/* ===== Personagens / Lore — Cards ===== */
+
+#ListPanel { background-color: #1a1826; }
+#ListHeader { background-color: #1a1826; border-bottom: 1px solid #2d2b3d; }
+
+#CharacterCard, #LoreCard {
+    background-color: #0f0e17; border: 1px solid #2d2b3d;
+    border-radius: 6px; padding: 0;
+}
+#CharacterCard:hover, #LoreCard:hover {
+    border-color: #c9a84c;
+}
+
+#CardName { font-size: 14px; font-weight: 600; color: #fffffe; background: transparent; }
+#CardInfo { font-size: 11px; color: #a7a9be; background: transparent; }
+#CardPreview { font-size: 11px; color: #2d2b3d; background: transparent; }
+#CardTag {
+    font-size: 9px; font-weight: 600; letter-spacing: 1px;
+    padding: 2px 6px; border-radius: 3px; background: transparent;
+}
+#CardTag[npc="true"] { color: #c9a84c; }
+#CardTag[npc="false"] { color: #4a6ac9; }
+
+#AttrName { font-size: 12px; color: #a7a9be; background: transparent; }
+#AttrMod { font-size: 12px; font-weight: 600; color: #c9a84c; background: transparent; min-width: 36px; }
+
+#DetailScroll { background: transparent; }
+
+/* ===== Mapa — Toolbar ===== */
+
+#MapToolbar {
+    background-color: #1a1826; border-bottom: 1px solid #2d2b3d;
+    min-height: 44px;
+}
+
+#ToolButton {
+    background-color: transparent; color: #a7a9be; border-radius: 4px;
+    padding: 6px 10px; font-size: 12px;
+}
+#ToolButton:hover { background-color: #2d2b3d; color: #fffffe; }
+#ToolButton:checked { background-color: #2d2b3d; color: #c9a84c; font-weight: 600; }
+
+/* ===== Placeholders ===== */
+
+#PlaceholderIcon { font-size: 64px; color: #2d2b3d; }
+#PlaceholderTitle { font-size: 20px; font-weight: 600; color: #a7a9be; }
+#PlaceholderText { font-size: 13px; color: #2d2b3d; }
+
+/* ===== Dialogs (QInputDialog, QMessageBox) ===== */
+
+QDialog {
+    background-color: #1a1826;
+}
+QDialog QLabel { color: #fffffe; background: transparent; }
+QDialog QPushButton {
+    background-color: #2d2b3d; color: #fffffe; border-radius: 4px;
+    padding: 6px 16px; min-width: 60px;
+}
+QDialog QPushButton:hover { background-color: #c9a84c; color: #0f0e17; }
